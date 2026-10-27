@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "WebMind",
+  "version": "1.0.0",
+  "description": "Chat with any webpage, PDF, or YouTube video using AI. Your private multi-model reading assistant.",
+  "permissions": ["storage", "activeTab", "scripting", "contextMenus", "sidePanel"],
+  "host_permissions": ["<all_urls>"],
+  "side_panel": { "default_path": "sidepanel/panel.html" },
+  "background": { "service_worker": "background/service_worker.js" },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content/extractor.js"],
+    "run_at": "document_idle"
+  }],
+  "commands": {
+    "open-panel": {
+      "suggested_key": { "default": "Alt+W" },
+      "description": "Open WebMind panel"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

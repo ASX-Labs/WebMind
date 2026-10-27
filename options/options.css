@@ -1,0 +1,106 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #060606; color: #ffffff;
+  font-family: -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px; min-height: 100vh;
+}
+
+.container {
+  max-width: 600px; margin: 0 auto; padding: 0 20px 60px;
+}
+
+header {
+  padding: 24px 0 20px; border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 28px;
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 18px; font-weight: 700;
+}
+
+section {
+  margin-bottom: 32px;
+}
+h2 {
+  font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.5);
+  text-transform: uppercase; letter-spacing: .08em;
+  margin-bottom: 16px;
+}
+.section-desc {
+  color: #666; font-size: 12px; margin-bottom: 16px; margin-top: -10px;
+}
+
+.field-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block; font-size: 13px; font-weight: 600;
+  margin-bottom: 7px; color: #ccc;
+}
+.key-row {
+  display: flex; gap: 8px;
+}
+input[type="password"], input[type="text"], select {
+  width: 100%; background: #0e0e0e; border: 1px solid rgba(255,255,255,0.1);
+  color: #fff; border-radius: 8px; padding: 9px 12px;
+  font-size: 13px; outline: none; font-family: inherit;
+  transition: border-color .15s;
+}
+.key-row input { flex: 1; }
+input:focus, select:focus { border-color: rgba(255,255,255,0.25); }
+input::placeholder { color: #444; }
+
+.show-btn, .test-btn {
+  background: #161616; border: 1px solid rgba(255,255,255,0.1);
+  color: #888; border-radius: 8px; padding: 0 12px;
+  font-size: 12px; cursor: pointer; white-space: nowrap;
+  transition: color .15s, border-color .15s;
+}
+.show-btn:hover, .test-btn:hover { color: #fff; border-color: rgba(255,255,255,0.2); }
+
+.key-status {
+  display: block; font-size: 11px; margin-top: 5px; min-height: 16px;
+}
+.key-status.ok { color: #10b981; }
+.key-status.err { color: #ef4444; }
+
+.hint {
+  font-size: 11px; color: #555; margin-top: 6px; line-height: 1.5;
+}
+.hint a { color: #888; }
+.hint a:hover { color: #ccc; }
+
+select { cursor: pointer; appearance: none; }
+optgroup { color: #888; }
+option { color: #fff; background: #0e0e0e; }
+
+.action-row {
+  display: flex; gap: 8px;
+}
+.btn-secondary {
+  background: #161616; border: 1px solid rgba(255,255,255,0.1);
+  color: #888; border-radius: 8px; padding: 8px 14px;
+  font-size: 12px; cursor: pointer; transition: color .15s, border-color .15s;
+}
+.btn-secondary:hover { color: #fff; border-color: rgba(255,255,255,0.2); }
+.btn-danger {
+  background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3);
+  color: #ef4444; border-radius: 8px; padding: 8px 14px;
+  font-size: 12px; cursor: pointer; transition: background .15s;
+}
+.btn-danger:hover { background: rgba(239,68,68,0.15); }
+
+.save-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #060606; border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 14px 20px; display: flex; align-items: center; gap: 14px;
+  max-width: 600px; margin: 0 auto;
+}
+.btn-save {
+  background: #ffffff; color: #060606; border: none; border-radius: 9px;
+  padding: 10px 28px; font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: opacity .15s;
+}
+.btn-save:hover { opacity: 0.85; }
+#saveStatus { font-size: 12px; color: #10b981; }
